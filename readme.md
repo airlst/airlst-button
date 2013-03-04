@@ -26,7 +26,7 @@ This will load the AirLST Widget javascript bridge, which will handle the comple
 
 To render a reservation button, use the following code:
 
-	<a href="#" class="airlst-button" data-widget-key="XXX" />Make reservation</a>
+	<a href="#" class="airlst-button" data-widget-key="XXX">Make reservation</a>
 	
 where you have to replace ```XXX``` with your actual widget-key (get it from the AirLST admin panel).
 
