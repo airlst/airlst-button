@@ -12,7 +12,7 @@ Integrating AirLST widget is as easy as copying two snippets of javascript to yo
 
 Copy & Paste the following code snippet on your page, preferably in the ``<head>`` section.
 
-	<script type=\"text/javascript\">
+	<script type="text/javascript">
 		(function() {
 			var al = document.createElement('script'); al.type = 'text/javascript'; al.async = true;
 			al.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.airlst.com/widget/v2/airlst-button.js';
@@ -37,8 +37,11 @@ AirLst Widget can be customized using additional parameters on the ``<a>``-Tag. 
 * __data-rsvplist-id=""__ Only displays a specific guestlist. Get the id from the admin panel.
 * __data-text-addon=""__ This text will be invisibly added to the reservation message. It is best used to send additional information to the recipient of the request, which should not be visible to the user.
 
+##Example implementations
+* [Implementation with link/loader](example-with-loader.html)
+* [Implementation with classic script-tag](example-with-script-tag.html)
 
-##Examples
+##Real world examples
 
 * [Bar Reichenbach, München](http://www.bar-reichenbach.de)
 * [Cocco Bello, Ludwigsburg](http://www.cocco-bello.de)
