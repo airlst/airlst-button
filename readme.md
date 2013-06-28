@@ -6,7 +6,7 @@ __Keywords:__ Restaurant, Reservation, Booking, Widget, Online, Reservation
 AirLST (pronounced *airlist*) allows you to easily accept online reservations from your website. AirLST Widget can be integrated with one single line of javascript. The user interface is responsive and seamlessly works on mobile phones, tablet and standard desktop screens.
 
 ##Usage
-Integrating AirLST widget is as easy as copying two snippets of javascript to your page: A loader and the actual link.
+Integrating AirLST widget is as easy as copying two snippets of javascript to your page: A loader and the actual link. This advanced method differs a bit from the simple method that is provided in the AirLST Admin Backend.
 
 ###Loader
 
@@ -31,11 +31,57 @@ To render a reservation button, use the following code:
 where you have to replace ```XXX``` with your actual widget-key (get it from the AirLST admin panel).
 
 ##Parameters
-AirLst Widget can be customized using additional parameters on the ``<a>``-Tag. Here's the list of optional parameters:
+AirLst widget can be customized using additional parameters on the ``<a>``-Tag. Here's the list of optional parameters:
 
-* __data-widget-key=""__ (mandatory) Use your custom widget-key, which can be found in the admin panel.
-* __data-rsvplist-id=""__ Only displays a specific guestlist. Get the id from the admin panel.
-* __data-text-addon=""__ This text will be invisibly added to the reservation message. It is best used to send additional information to the recipient of the request, which should not be visible to the user.
+### data-widget-key
+Use ```data-widget-key=""``` with your custom widget-key, which can be found in the admin panel.
+
+**Example:**
+
+	data-widget-key="hDjSkSkD"
+
+### data-rsvplist-id (optional)
+The default widget for guestlists offers a drop down menu on the first screen, where the user can choose the appropriate guestlist to make a reservation on. Use ```data-rsvplist-id=""``` to only display a specific guestlist in the widget. 
+
+**Example:**
+
+	data-rsvplist-id="83728"
+
+### data-text-addon (optional)
+With this parameter, you can provide a hidden text, which will be attached to the reservation. It is best used to send additional information back to the recipient of the request (for example, to your guest relations manager), which should not be visible to the guest.
+
+Example usage would be:
+- You have different reservation websites and want to track from which website the reservation is coming
+- You offer two separate widgets for smoker and non-smoker reservations
+
+**Example:**
+
+	data-text-addon="Reservierung für Club"
+
+
+### data-field-phone (optional)
+The default widget requires the user to enter a telephone number. You can either make this field optional or hide it completely by specifying ```data-field-phone```.
+
+* ```data-field-phone="require"``` Requires phone number
+* ```data-field-phone="display"``` Display the phone number field, but don't require an input
+* ```data-field-phone="hide"``` Hide the phone number field completely
+
+### data-field-msg-request (optional)
+The default widget allows the user to enter a comment for this reservation. You can hide this comment field by using parameter ```data-field-msg-request```.
+
+* ```data-field-msg-request="display"``` Show the comment field
+* ```data-field-msg-request="hide"``` Hide the comment field
+
+
+### data-button-text (optional)
+The default widget uses the text "Jetzt reservieren!" on the submit button on the last screen. Use ```data-button-text``` to change this text.
+
+**Example:**
+
+	data-button-text="Jetzt rückmelden!"
+	
+### class="airlst-style" (optional)
+If you would like to render your reservation link in the classic AirLST-Button style (blue button with white typo), simply add ```airlst-style```to the class-attribute of the element. Be careful not to remove the ```airlst-button```class from the element.
 
 ##Example implementations
 * [Implementation with link/loader](example-with-loader.html)
