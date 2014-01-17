@@ -72,6 +72,22 @@ The default widget allows the user to enter a comment for this reservation. You 
 * ```data-field-msg-request="display"``` Show the comment field
 * ```data-field-msg-request="hide"``` Hide the comment field
 
+### data-field-additional (optional)
+You can add one custom field to be entered by the user during registration.
+
+* ```data-field-additional="require"``` Make input for the additional field required
+* ```data-field-phone="display"``` Just display the additional field, but don't require input
+* ```data-field-phone="hide"``` Hide the additional field
+
+**Please Note:** To use the addtional field, you have to provide a label for it (see next parameter ```data-field-additional-label```).
+
+### data-field-additional-label (optional)
+With this parameters, you can specify how the additional field should be called.
+
+**Example:**
+
+	data-additional-field-label="Firma"
+
 
 ### data-button-text (optional)
 The default widget uses the text "Jetzt reservieren!" on the submit button on the last screen. Use ```data-button-text``` to change this text.
