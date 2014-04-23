@@ -96,6 +96,28 @@ The default widget uses the text "Jetzt reservieren!" on the submit button on th
 
 	data-button-text="Jetzt rückmelden!"
 	
+### data-date-rsvp-min
+With this parameter, you can specify a minimum date for calendar reservations. You can use it to only allow reservations after a certain date, for example if the opening of your venue is in the future.
+
+**Example:**
+	
+	data-date-rsvp-min="20140620"
+	
+This will block reservations before June 20th, 2014. 
+
+	Syntax for dates: YYYYMMDD
+
+### data-date-rsvp-max
+With this parameter, you can specify a maximum date for calendar reservations. You can use it to only allow reservations before a certain date, for example if your venure closes in a few weeks.
+
+**Example:**
+	
+	data-date-rsvp-max="20140930"
+	
+This will block reservations after September 30th, 2014. 
+
+	Syntax for dates: YYYYMMDD
+	
 ### class="airlst-style" (optional)
 If you would like to render your reservation link in the classic AirLST-Button style (blue button with white typo), simply add ```airlst-style```to the class-attribute of the element. Be careful not to remove the ```airlst-button```class from the element.
 
